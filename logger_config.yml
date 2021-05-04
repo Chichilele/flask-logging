@@ -5,6 +5,7 @@ handlers:
   logfile:
     class: logging.FileHandler
     filename: flask_log.log
+    formatter: default
   wsgi:
     class: logging.StreamHandler
     formatter: default
