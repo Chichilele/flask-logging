@@ -2,14 +2,14 @@ formatters:
   default:
     format: '[%(asctime)s] %(levelname)s in %(name)s of %(module)s : %(message)s'
 handlers:
-  logfile:
-    class: logging.FileHandler
-    filename: flask_log.log
-    formatter: default
   wsgi:
     class: logging.StreamHandler
     formatter: default
     stream: ext://flask.logging.wsgi_errors_stream
+  logfile:
+    class: logging.FileHandler
+    filename: logconfig.log
+    formatter: default
 root:
   handlers:
   - wsgi
